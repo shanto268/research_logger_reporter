@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+/Users/shanto/miniforge3/bin/python workLogger.py
+
+tput bel
+
+text="Daily Work Log Created"
+title="LFL Work Logger"
+/usr/bin/osascript -e "display notification \"$text\" with title \"$title\""
+

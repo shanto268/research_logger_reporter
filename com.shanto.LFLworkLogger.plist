@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.shanto.LFLworkLogger</string>
+        <key>Program</key>
+        <string>/Users/shanto/Programming/research_productivity/work_logger/LFLworkLogger-launchd</string>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>/bin:/usr/bin:/usr/local/bin</string>
+        </dict>
+        <key>StandardInPath</key>
+        <string>/tmp/lfl_work_logger.stdin</string>
+        <key>StandardOutPath</key>
+        <string>/tmp/lfl_work_logger.stdout</string>
+        <key>StandardErrorPath</key>
+        <string>/tmp/lfl_work_logger.stderr</string>
+        <key>WorkingDirectory</key>
+        <string>/Users/shanto/Programming/research_productivity/work_logger/</string>
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Hour</key>
+            <integer>8</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </dict>
+</plist>
