@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+/Users/shanto/miniforge3/bin/python createWeekSummaryReport.py
+
+tput bel
+
+text="Weekly Work Summary Created"
+title="LFL Summary Reporter"
+/usr/bin/osascript -e "display notification \"$text\" with title \"$title\""
+
