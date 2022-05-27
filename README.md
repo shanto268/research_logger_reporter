@@ -1,7 +1,6 @@
-**WORKS ONLY FOR MAC OS. CAN BE EASILY CHANGED FOR LINUX BY USING CRON INSTEAD OF LAUNCHD**
-
 # Requirements
 -[] have `python` installed on your machine
+
 -[] have `pandoc` installed on your machine (*just `brew install pandoc`*)
 
 # Purpose
@@ -75,9 +74,17 @@
 
 # Usage
 
-First test the code works as intended by running the `launchd` bash script. If it works well, then start the daemon process by
+First test the code works as intended by running the `launchd` bash script. If it works well, then start the daemon process by 
 
-`$ launchctl load -w nameOfWorkLoggerPlistFile.plist #i.e. the .plist file in ~/Library/LaunchAgents/`
-`$ launchctl load -w nameOfSummaryReporterPlistFile.plist #i.e. the .plist file in ~/Library/LaunchAgents/`
+```
+$ cp *.plist ~/Library/LaunchAgents
+$ cd ~/Library/LaunchAgents #create this directory if missing
+$ launchctl load -w nameOfWorkLoggerPlistFile.plist 
+$ launchctl load -w nameOfSummaryReporterPlistFile.plist
+```
+
+
+# Disclaimers
 
 **OF COURSE WORK LOGGER FUNCTIONALITY CAN BE USED WITHOUTH SUMMARY REPORTING**
+**WORKS ONLY FOR MAC OS. CAN BE EASILY CHANGED FOR LINUX BY USING CRON INSTEAD OF LAUNCHD**
