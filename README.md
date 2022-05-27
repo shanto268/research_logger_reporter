@@ -1,7 +1,8 @@
 # Requirements
--[] have `python` installed on your machine
 
--[] have `pandoc` installed on your machine (*just `brew install pandoc`*)
+- have `python` installed on your machine
+
+- have `pandoc` installed on your machine (*just `brew install pandoc`*)
 
 # Purpose
 
@@ -86,5 +87,5 @@ $ launchctl load -w nameOfSummaryReporterPlistFile.plist
 
 # Disclaimers
 
-**OF COURSE WORK LOGGER FUNCTIONALITY CAN BE USED WITHOUTH SUMMARY REPORTING**
-**WORKS ONLY FOR MAC OS. CAN BE EASILY CHANGED FOR LINUX BY USING CRON INSTEAD OF LAUNCHD**
+- **OF COURSE WORK LOGGER FUNCTIONALITY CAN BE USED WITHOUTH SUMMARY REPORTING**
+- **WORKS ONLY FOR MAC OS. CAN BE EASILY CHANGED FOR LINUX BY USING CRON INSTEAD OF LAUNCHD**
