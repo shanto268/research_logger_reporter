@@ -84,6 +84,10 @@ $ launchctl load -w nameOfWorkLoggerPlistFile.plist
 $ launchctl load -w nameOfSummaryReporterPlistFile.plist
 ```
 
+# Functionality Request:
+
+- [] Group all `# tags` in the `.md` files together in the summary pdf
+
 
 # Disclaimers
 
