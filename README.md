@@ -86,7 +86,9 @@ $ launchctl load -w nameOfSummaryReporterPlistFile.plist
 
 # Functionality Request:
 
+- [  ] Don't include files where no work is done in the summary pdf (e.g. some weekends or holidays)
 - [  ] Group all `# tags` in the `.md` files together in the summary pdf
+
 
 # Disclaimers
 
