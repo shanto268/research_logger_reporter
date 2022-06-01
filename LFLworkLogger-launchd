@@ -2,7 +2,6 @@
 
 /Users/shanto/miniforge3/bin/python workLogger.py
 
-tput bel
 
 text="Daily Work Log Created"
 title="LFL Work Logger"

@@ -2,7 +2,6 @@
 
 /Users/shanto/miniforge3/bin/python createWeekSummaryReport.py
 
-tput bel
 
 text="Weekly Work Summary Created"
 title="LFL Summary Reporter"
