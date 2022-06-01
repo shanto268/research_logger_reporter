@@ -46,10 +46,19 @@ def get_all_files(all_paths, files):
     all_files = np.array_split(all_files, len(files))
     return all_files
 
+def create_dir(path):
+    try:
+        os.mkdir(path)
+    except:
+        pass
+    return path
+
+
 def create_file_dump(all_files, target_path):
     fnames = []
     line = "-"*3
     end_line = "\n"+line+"\n\n"
+    target_path = create_dir(target_path + "/" + today)
 
     for files in all_files:
         i = 0 # for single shot loop execution
@@ -58,7 +67,7 @@ def create_file_dump(all_files, target_path):
             #creates the summary files with the correct name in the right directory
             while i < 1: #this loop executes once
                 actual_file = file.split("/")[-1]
-                fname = target_path + "/" + today + "_" + actual_file
+                fname = target_path + "/" + actual_file
                 fnames.append(fname)
                 try:
                     bashCommand = "touch {}".format(fname)
@@ -74,7 +83,7 @@ def create_file_dump(all_files, target_path):
             except:
                 pass
 
-        print(fname + " has been created!")
+        # print(fname + " has been created!")
 
         # parse the file content
         content = end_line.join(content)
@@ -91,13 +100,15 @@ def create_file_dump(all_files, target_path):
 
         #make pdf from markdown
         try:
+            print(fname)
             pdfname = fname.split(".")[0] + ".pdf"
-            bashCommand = "pandoc -s -o {} {}".format(pdfname,fname)
+            # make pdf using pandoc
+            bashCommand = "pandoc -s -o {} {} --pdf-engine=/Library/TeX/texbin/pdflatex".format(pdfname,fname)
             process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
             output, error = process.communicate()
         except:
             pass
-        print(pdfname + " has been created!")
+        # print(pdfname + " has been created!")
 
 
 
