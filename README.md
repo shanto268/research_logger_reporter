@@ -88,7 +88,7 @@ $ launchctl load -w nameOfSummaryReporterPlistFile.plist
 
 - [  ] Don't include files where no work is done in the summary pdf (e.g. some weekends or holidays)
 - [  ] Allow latex formula
-- [  ] Group all `# tags` in the `.md` files together in the summary pdf
+- [  ] Create functionality for creating summary pdf corresponding to each `# tags` in the `.md` files
 
 
 # Disclaimers
