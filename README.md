@@ -86,11 +86,11 @@ $ launchctl load -w nameOfSummaryReporterPlistFile.plist
 
 # Functionality Request:
 
-- [  ] Autoformatting of links in summary files
-- [  ] Don't include files where no work is done in the summary pdf (e.g. some weekends or holidays)
-- [  ] Automoving of unfinished goals to the next day for `workLogger.py`
-- [  ] Allow latex formula
-- [  ] Create functionality for creating summary pdf corresponding to each `# tags` in the `.md` files
+-[  ] Autoformatting of links in summary files
+-[  ] Don't include files where no work is done in the summary pdf (e.g. some weekends or holidays)
+-[  ] Automoving of unfinished goals to the next day for `workLogger.py`
+-[  ] Allow latex formula
+-[  ] Create functionality for creating summary pdf corresponding to each `# tags` in the `.md` files
 
 
 # Disclaimers
