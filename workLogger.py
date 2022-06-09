@@ -62,9 +62,7 @@ def update_entries(file, path2yesterday, path2day):
     #update yesterday's file
     fy_path = path2yesterday + "/" + file
     f = open(fy_path, "w")
-    yesterday_formatted = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%B %d, %Y")
-    f.write("# "+str(yesterday_formatted))
-    f.write("\n"+str(content_yesterday))
+    f.write(str(content_yesterday))
     f.close()
 
     #update today's file
@@ -72,6 +70,15 @@ def update_entries(file, path2yesterday, path2day):
     f = open(fpath, "a")
     f.write("\n"+str(content_today))
     f.close()
+
+def update_files(file, project_root):
+    yesterday = str(datetime.date.today() - datetime.timedelta(days=1) ).replace("-","_")
+    path2yesterday = project_root+"/"+yesterday
+
+    today = str(datetime.date.today()).replace("-","_")
+    path2today = project_root+"/"+today
+
+    update_entries(file, path2yesterday, path2today)
 
 def files_to_create(path, files):
     """Creates the required files in the input directory
@@ -97,16 +104,6 @@ def files_to_create(path, files):
             f.write("## Questions:\n\n\n")
             f.write("## Ideas:\n\n\n")
         f.close()
-
-
-def update_files(file, project_root):
-    yesterday = str(datetime.date.today() - datetime.timedelta(days=1) ).replace("-","_")
-    path2yesterday = project_root+"/"+yesterday
-
-    today = str(datetime.date.today()).replace("-","_")
-    path2today = project_root+"/"+today
-
-    update_entries(file, path2yesterday, path2today)
 
 
 # main function
