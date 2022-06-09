@@ -12,6 +12,7 @@ __date__ = "05/27/2022"
 
 #libraries used
 import numpy as np
+import re
 import os, sys, datetime, glob, subprocess
 
 def get_all_paths(base_path):
@@ -89,6 +90,8 @@ def create_file_dump(all_files, target_path):
         content = end_line.join(content)
         content = content.replace("-[x]","\n\n- [x]")
         content = content.replace("-[]","\n\n- [  ]")
+        content = content.replace("-[]","\n\n- [  ]")
+
 
         # dump file content from memory to summary file
         f_summary = open(fname, "a")
