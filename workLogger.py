@@ -68,7 +68,7 @@ def update_entries(file, path2yesterday, path2day):
     #update today's file
     fpath = path2day + "/" + file
     f = open(fpath, "a")
-    f.write("\n"+str(content_today))
+    f.write(str(content_today))
     f.close()
 
 def update_files(file, project_root):
@@ -97,7 +97,7 @@ def files_to_create(path, files):
 
         f = open(fpath, "a")
         today_formatted = (datetime.date.today()+ datetime.timedelta(days=1)).strftime("%B %d, %Y")
-        f.write("# "+str(today_formatted))
+        f.write("# "+str(today_formatted)+"\n")
 
         if file == "summary.md":
             f.write("\n\n## Done:\n\n\n")
