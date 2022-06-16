@@ -97,10 +97,10 @@ def files_to_create(path, files):
 
         f = open(fpath, "a")
         today_formatted = (datetime.date.today()+ datetime.timedelta(days=1)).strftime("%B %d, %Y")
-        f.write("# "+str(today_formatted)+"\n")
+        f.write("# "+str(today_formatted)+"\n\n")
 
         if file == "summary.md":
-            f.write("\n\n## Done:\n\n\n")
+            f.write("## Done:\n\n\n")
             f.write("## Questions:\n\n\n")
             f.write("## Ideas:\n\n\n")
         f.close()
